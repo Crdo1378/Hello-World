@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DangNhap"
+    android:weightSum="2"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/tvCSCOM"
+        android:text="CSCOM"
+        android:textSize="50dp"
+        android:textColor="#F3F3F0"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:background="#6F00FF"></TextView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:weightSum="4"
+            android:orientation="vertical">
+
+            <EditText
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:hint="User"
+                android:id="@+id/txUser"></EditText>
+
+            <EditText
+                android:id="@+id/txPass"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_weight="1"
+                android:hint="Password"
+                android:inputType="textPassword"></EditText>
+            <Button
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:id="@+id/btDangNhap"
+                android:textColor="#090A13"
+                android:background="#9C27B0"
+                android:text="Đăng Nhập"></Button>
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:weightSum="10"
+                android:layout_height="5dp"
+                android:orientation="horizontal">
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cbLuuThongTin">
+                </androidx.appcompat.widget.AppCompatCheckBox>
+                <TextView
+                    android:layout_weight="9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lưu thông tin đăng nhập"></TextView>
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
